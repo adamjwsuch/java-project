@@ -1,5 +1,9 @@
 pipeline {
-  agent none
+  agent {
+        docker {
+            image 'adamjwsuch/jenkins-maven-slave'
+        }
+    }
 
   environment {
     MAJOR_VERSION = 1
